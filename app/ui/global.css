@@ -1,0 +1,26 @@
+/* 导入 Tailwind CSS 的基础样式 */
+@tailwind base;
+/* 导入 Tailwind CSS 的组件样式 */
+@tailwind components;
+/* 导入 Tailwind CSS 的实用工具类样式 */
+@tailwind utilities;
+
+/* 为输入框类型为数字的元素设置样式 */
+input[type='number'] {
+  /* 在 Firefox 中隐藏数字输入框默认样式 */
+  -moz-appearance: textfield;
+  /* 在其他浏览器中隐藏数字输入框默认样式 */
+  appearance: textfield;
+}
+
+/* 隐藏 Webkit 内部的数字输入框旋钮（仅适用于 Chrome 和 Safari） */
+input[type='number']::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+/* 隐藏 Webkit 外部的数字输入框旋钮（仅适用于 Chrome 和 Safari） */
+input[type='number']::-webkit-outer-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
